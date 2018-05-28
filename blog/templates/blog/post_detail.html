@@ -2,22 +2,25 @@
 
 {% block content %}
     <div class="post">
-      {% if post.published_date %}
-        <div class="date">
-            {{ post.published_date }}
-        </div>
-      {% else %}
-        <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-      {% endif %}
         {% if user.is_authenticated %}
              <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
              <a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% endif %}
         <h1>{{ post.title }}</h1>
+        {% if post.image %}
+        <img src="{{ post.image.url }}" alt="post_img" class="menu-img">
+        {% endif %}
         <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.published_date %}
+          <div class="date">
+              {{ post.published_date }}
+          </div>
+        {% else %}
+          <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+        {% endif %}
     </div>
     <hr>
-    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+    <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">댓글입력</a>
     {% for comment in post.comments.all %}
         {% if user.is_authenticated or comment.approved_comment %}
         <div class="comment">
@@ -33,6 +36,6 @@
         </div>
         {% endif %}
     {% empty %}
-        <p>No comments here yet :(</p>
+        <p>등록된 댓글이 없습니다.</p>
 {% endfor %}
 {% endblock content %}
