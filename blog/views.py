@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post, Comment
+from .models import Post, Comment, About
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
@@ -15,7 +15,8 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def about(request):
-    return render(request, 'blog/about.html')
+    list = About.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/about.html', {'about': about})
 
 def resolvation(request):
     return render(request, 'blog/resolvation.html')

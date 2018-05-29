@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<!--
+  {% for about in abouts %}
+      <div class="about">
+          {% if post.image %}
+          <img src="{{ about.image.url }}" alt="about_img" class="about-img">
+          {% endif %}
+          <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
+  -->
+
+  <div class="resovation">
+      <table>
+        <tr>
+          <th><img src="media/phone_icon.png" alt="phone_icon" class="resovation-img"></th>
+          <th><p>010-1234-5678</p></th>
+        </tr>
+        <tr>
+          <th><img src="media/mail_icon.png" alt="mail_icon" class="resovation-img"></th>
+          <th><p>장수촌@gmail.com</p></th>
+        </tr>
+        <tr>
+          <th><img src="media/kakaotalk_icon.jpeg" alt="kakaotalk_icon" class="resovation-img"></th>
+          <th><p>kakaotalk</p></th>
+        </tr>
+      </table>
+  </div>
+
+{% endblock content %}
