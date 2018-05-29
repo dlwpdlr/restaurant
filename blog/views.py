@@ -14,6 +14,18 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+def about(request):
+    return render(request, 'blog/about.html')
+
+def resolvation(request):
+    return render(request, 'blog/resolvation.html')
+
+def gallery(request):
+    return render(request, 'blog/gallery.html')
+
+def map(request):
+    return render(request, 'blog/map.html')
+
 @login_required
 def post_new(request):
     if request.method == "POST":
