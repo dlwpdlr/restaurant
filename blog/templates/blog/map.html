@@ -6,7 +6,7 @@
           {% if map.image %}
           <img src="{{ map.image.url }}" alt="about_img" class="about-img">
           {% endif %}
-          <p>{{ map.text|linebreaksbr }}</p>
+          <p class="content-detail">{{ map.text|linebreaksbr }}</p>
       </div>
   {% endfor %}
 {% endblock content %}

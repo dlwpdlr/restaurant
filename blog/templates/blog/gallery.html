@@ -6,7 +6,7 @@
           {% if gallery.image %}
           <img src="{{ gallery.image.url }}" alt="about_img" class="about-img">
           {% endif %}
-          <p>{{ gallery.text|linebreaksbr }}</p>
+          <p class="content-detail">{{ gallery.text|linebreaksbr }}</p>
       </div>
   {% endfor %}
 {% endblock content %}

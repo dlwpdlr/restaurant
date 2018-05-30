@@ -6,7 +6,7 @@
           {% if about.image %}
           <img src="{{ about.image.url }}" alt="about_img" class="about-img">
           {% endif %}
-          <p>{{ about.text|linebreaksbr }}</p>
+          <p class="content-detail">{{ about.text|linebreaksbr }}</p>
       </div>
   {% endfor %}
 {% endblock content %}
