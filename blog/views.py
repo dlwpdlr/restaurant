@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post, Comment, About
+from .models import Post, Comment, About, Map, Gallery
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
@@ -17,6 +17,15 @@ def post_detail(request, pk):
 def about(request):
     abouts = About.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/about.html', {'abouts': abouts})
+
+def map(request):
+    maps = Map.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/map.html', {'maps': maps})
+
+def gallery(request):
+    gallerys = Gallery.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/gallery.html', {'gallerys': gallerys})
+
 
 def resolvation(request):
     return render(request, 'blog/resolvation.html')

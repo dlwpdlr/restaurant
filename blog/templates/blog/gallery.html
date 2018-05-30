@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for gallery in gallerys %}
+      <div class="about">
+          {% if gallery.image %}
+          <img src="{{ gallery.image.url }}" alt="about_img" class="about-img">
+          {% endif %}
+          <p>{{ gallery.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  {% for map in maps %}
+      <div class="about">
+          {% if map.image %}
+          <img src="{{ map.image.url }}" alt="about_img" class="about-img">
+          {% endif %}
+          <p>{{ map.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
+{% endblock content %}
