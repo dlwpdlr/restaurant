@@ -26,15 +26,8 @@ def gallery(request):
     gallerys = Gallery.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/gallery.html', {'gallerys': gallerys})
 
-
 def resolvation(request):
     return render(request, 'blog/resolvation.html')
-
-def gallery(request):
-    return render(request, 'blog/gallery.html')
-
-def map(request):
-    return render(request, 'blog/map.html')
 
 @login_required
 def post_new(request):
