@@ -1,38 +1,48 @@
-.page-header {
-    background-color: #ffffff;
+.header-logo {
+    background-color: #342816;
+    width: 100%;
+    font-size: 28pt;
     margin-top: 0;
+    text-align: left;
+    font-family: 'Lobster', cursive;
     padding: 20px 20px 20px 20px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.header-logo a{
+    color: #ffffff;
+}
+
+.header-logo-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.header-menu {
+    width: 100%;
+    margin-top: 10pt;
+}
+
+.header-menu th, .header-menu th a, .header-menu th a:visited, .header-menu th a:active {
     color: #725728;
-    font-size: 36pt;
+    font-size: 20pt;
     text-decoration: none;
     text-align: center;
 }
 
-.page-menu {
-  align:center;
-  width: 100%;
-}
-
-.page-menu th, .page-menu a, .post a:visited {
-  color: #725728;
-  font-size: 16pt;
-  text-align: center;
-}
-
 .page-footer {
+    width: 100%;
+    background-color: #ececec;
     color: #725728;
     font-size: 15pt;
     text-align: center;
+    padding: 20px 20px 20px 20px;
 }
 
 .content {
 
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, p {
     font-family: 'Lobster', cursive;
 }
 
@@ -59,10 +69,6 @@ h1, h2, h3, h4 {
     margin-bottom: 10px;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #725728;
-}
-
 .comment {
     margin: 20px 0px 20px 0px;
 }
@@ -79,11 +85,6 @@ h1, h2, h3, h4 {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-}
-
-.about p{
-  color: #725728;
-  font-size: 15pt;
 }
 
 .about-img{

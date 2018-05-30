@@ -15,8 +15,8 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def about(request):
-    list = About.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/about.html', {'about': about})
+    abouts = About.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/about.html', {'abouts': abouts})
 
 def resolvation(request):
     return render(request, 'blog/resolvation.html')

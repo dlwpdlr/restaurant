@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div class="page-header">
+        <div>
           <!--
           {% if user.is_authenticated %}
               <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -18,8 +18,11 @@
               <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
           {% endif %}
           -->
-          <a href="/" ><img src="{% static "image/icon.png" %}" alt="icon" class="main-icon"></a>
-          <table class="page-menu">
+          <div class="header-logo">
+            <a href="/" ><img src="/media/logo.png" class="header-logo-icon"> 당진 장수촌</a>
+          </div>
+
+          <table class="header-menu">
             <tr>
               <th><a href="/about" >장수촌에 대하여</a></th>
               <th><a href="/" >장수촌의 메뉴</a></th>
@@ -38,9 +41,11 @@
             </div>
         </div>
         <div class="page-footer">
-          <p><b>상호</b> 장수촌 | <b>대표</b> 아무개 | 홍길동 | <b>대표전화</b> 010-1234-5678</p>
-          <p><b>주소</b> 충청남도 당진군 어딘면 무슨리 123-10번 | <b>주소</b> 충청남도 당진군 어딘면 무슨리 123-10번</p>
-          <p><b>사업자등록번</b> 123-56-7890 | <b>개인정보관리책임자</b> abcedf@naver.com</p>
+          <p><b>상호</b> 장수촌 | <b>대표</b> 아무개 | 홍길동</p>
+          <p><b>대표전화</b> 010-1234-5678</p>
+          <p><b>주소</b> 충청남도 당진군 어딘면 무슨리 123-10번</p>
+          <p><b>사업자등록번</b> 123-56-7890</p>
+          <p><b>개인정보관리책임자</b> abcedf@naver.com</p>
           <p>국민은행 1234-56-7890-1234</p>
         </div>
     </body>
