@@ -4,8 +4,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
-    url(r'^about$', views.about, name='about'),
+    url(r'^post_list$', views.post_list, name='post_list'),
+    url(r'^$', views.about, name='about'),
     url(r'^resolvation$', views.resolvation, name='resolvation'),
     url(r'^gallery$', views.gallery, name='gallery'),
     url(r'^map$', views.map, name='map'),
