@@ -20,6 +20,7 @@
 .header-menu {
     width: 100%;
     margin-top: 10pt;
+    margin-bottom: 10pt;
 }
 
 .header-menu th, .header-menu th a, .header-menu th a:visited, .header-menu th a:active {
@@ -39,11 +40,27 @@
 }
 
 .content {
-
+  padding: 20px 20px 20px 20px;
 }
 
 h1, h2, h3, h4, p {
+    color: #725728;
     font-family: 'Lobster', cursive;
+}
+
+.content-title {
+  color: #725728;
+  font-size: 15pt;
+}
+
+.content-detail {
+  color: #725728;
+  font-size: 15pt;
+}
+
+.content-comment {
+  color: #725728;
+  font-size: 10pt;
 }
 
 .date {
