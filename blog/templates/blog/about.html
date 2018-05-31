@@ -3,10 +3,12 @@
 {% block content %}
   {% for about in abouts %}
       <div class="about">
+          <h3>{{ about.title }}</h3><br>
+          <p>{{ about.text|linebreaksbr }}</p>
           {% if about.image %}
           <img src="{{ about.image.url }}" alt="about_img" class="about-img">
           {% endif %}
-          <p class="content-detail">{{ about.text|linebreaksbr }}</p>
+
       </div>
   {% endfor %}
 {% endblock content %}

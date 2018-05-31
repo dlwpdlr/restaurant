@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
+        <div style="background-image: URL(http://127.0.0.1:8000/media/header-bg.jpeg); width: 100%; height: 350px; padding: 20px 20px 20px 20px">
           <!--
           {% if user.is_authenticated %}
               <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -18,23 +18,40 @@
               <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
           {% endif %}
           -->
-          <div class="header-logo">
-            <a href="/" ><img src="/media/logo.png" class="header-logo-icon"> 당진 장수촌</a>
+          <div class="header-button-area">
+            <a href="/" ><img src="/media/menu-96.png" class="header-logo-icon"></a>
+            <a href="/" ><img src="/media/share-96.png" class="header-logo-icon" align="right"></a>
           </div>
 
-          <table class="header-menu">
-            <tr>
-              <th><a href="/" >장수촌에 대하여</a></th>
-              <th><a href="/post_list" >장수촌의 메뉴</a></th>
-              <th><a href="/resolvation" >장수촌 예약</a></th>
-              <th><a href="/gallery" >장수촌 갤러리</a></th>
-              <th><a href="/map" >찾아오시는길</a></th>
-            </tr>
-          </table>
+          <div class="header-menu-area" width="100%">
+
+            <div class="header-logo" align="center">
+              <a href="/" ><img src="/media/logo.png" class="header-logo-icon"> 당진 장수촌</a>
+            </div>
+
+            <div width="100%">
+
+              <div class="header-logo" align="center">
+                <table class="header-menu" algin="center">
+                  <tr>
+                    <th><a href="/" >장수촌에 대하여</a></th>
+                    <th><a href="/post_list" >장수촌의 메뉴</a></th>
+                    <th><a href="/resolvation" >장수촌 예약</a></th>
+                    <th><a href="/gallery" >장수촌 갤러리</a></th>
+                    <th><a href="/map" >찾아오시는길</a></th>
+                  </tr>
+                </table>
+
+          </div>
+            </div>
+          </div>
         </div>
-        <div class="content">
-            {% block content %}
-            {% endblock %}
+
+        <div class="content-body">
+          <div class="content">
+              {% block content %}
+              {% endblock %}
+          </div>
         </div>
         <div class="page-footer">
           <p><b>상호</b> 장수촌 | <b>대표</b> 아무개 | 홍길동</p>
