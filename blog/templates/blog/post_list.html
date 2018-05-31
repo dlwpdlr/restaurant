@@ -13,7 +13,7 @@
             <img src="{{ post.image.url }}" alt="post_img" class="menu-img">
             {% endif %}
             <p class="content-detail">{{ post.text|linebreaksbr }}</p>
-            <a href="{% url 'post_detail' pk=post.pk %}" class="content-comment">Comments: {{ post.approved_comments.count }}</a>
+            <a href="{% url 'post_detail' pk=post.pk %}" class="content-comment">댓글: {{ post.approved_comments.count }}</a>
         </div>
     {% endfor %}
 {% endblock content %}

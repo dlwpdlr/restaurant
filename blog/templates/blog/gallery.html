@@ -3,6 +3,7 @@
 {% block content %}
   {% for gallery in gallerys %}
       <div class="about">
+          <h1>{{ gallery.title }}</h1>
           {% if gallery.image %}
           <img src="{{ gallery.image.url }}" alt="about_img" class="about-img">
           {% endif %}
